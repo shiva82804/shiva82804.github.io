@@ -1,0 +1,223 @@
+body::before {
+    content: "";
+    position: fixed;
+    background: url('background.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    z-index: -1;  /* Pushes it behind everything */
+    opacity: 1; /* Optional: add slight dim for readability */
+}
+/* =========================
+   Global Styles
+========================= */
+:root {
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --dark: #121212;
+  --light: #f8f9fa;
+  --accent: #00d1b2;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark);
+  color: var(--light);
+  line-height: 1.6;
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+
+/* =========================
+   Navbar
+========================= */
+.navbar {
+  background-color: var(--light);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+  color: var(--dark) !important;
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+  text-decoration: underline;
+}
+
+
+/* =========================
+   Hero Section
+========================= */
+#home {
+  background: url('background.jpeg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+#home h1 {
+  font-size: 3rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+#home p {
+  font-size: 1.2rem;
+}
+
+/* =========================
+   About Section
+========================= */
+#about {
+  color: white;
+}
+#about img {
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+}
+
+#about .btn {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+#about .btn:hover {
+  background-color: var(--primary);
+  color: white;
+}
+.about-img {
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================
+   Skills Section
+========================= */
+#skills {
+  background-color: #2a2a2a;
+  color: white;
+}
+.card {
+  background-color: #1e1e1e;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+  color: var(--accent);
+}
+
+
+/* =========================
+   Projects Section
+========================= */
+#projects {
+  color: white;
+}
+#projects .card-footer a {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+#projects .card-footer a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Certification Section
+========================= */
+#certification {
+  color: white;
+}
+#certification .card {
+  border: 2px solid var(--primary);
+}
+#certification .card img {
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   Contact Section
+========================= */
+#contact {
+  color: white;
+}
+#contact .form-control {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+}
+
+#contact .form-control::placeholder {
+  color: #bbb;
+}
+
+#contact .btn {
+  background-color: var(--primary);
+  color: white;
+}
+
+#contact .btn:hover {
+  background-color: #0056b3;
+}
+
+/* =========================
+   Animations
+========================= */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+  #home h1 {
+    font-size: 2.2rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+    #about img {
+        max-width: 100%;
+        height: auto;
+    }
